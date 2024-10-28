@@ -15,9 +15,9 @@ Open TaskCache key from `SOFTWARE` hive: `Microsoft\Windows NT\CurrentVersion\Sc
 You will see the columns in the table:
 1) Key Name – task GUID;
 2) Path – path in tree;
-3) Actions – enumeration of commandlines that task performs;
-4) Actions Type – enumeration of types of actions that are used in task;
-5) Tree Key Last Write – timestamp of modification of task key in tree;
+3) Actions – list of commandlines that task performs;
+4) Actions Type – list of types of actions that are used in task;
+5) Tree Key Last Write – task key modification timestamp in tree;
 6) Created On - value from DynamicInfo;
 7) Last Start - value from DynamicInfo (null = 1970-01-01T00:00:00);
 8) Last Stop – value from DynamicInfo (null = 1970-01-01T00:00:00);
@@ -28,5 +28,5 @@ You will see the columns in the table:
 ![grid](./images/grid.png)
 
 
-*Alerts are triggered falsely when working with Windows 7-8 and also if there are deleted keys that have been restored using RE.\
+*Known false positives caused by working with Windows 7\8 and registry keys restored by RE.\
 **Original Zimmerman's TaskCache plugin is available when you open `TaskCache\Tasks` key.
